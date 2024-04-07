@@ -7,7 +7,7 @@
 :root {
   --primary-color: white;
   --primary-label: black;
-  --secondary-label: black;
+  --secondary-label: white;
   --white-ball: white;
   --black-ball: black;
 }
@@ -51,4 +51,11 @@ label::after {
   background: var(--black-ball);
   left: calc(100% - 5px);
   transform: translateX(-100%);
+}
+
+#switch:checked + label {
+  background-color: var(--secondary-label);
+}
+label:active::after {
+  width: 60px;
 }
